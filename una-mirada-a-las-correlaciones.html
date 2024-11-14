@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Una mirada a las correlaciones | Practica astasa</title>
+  <meta name="description" content="7 Una mirada a las correlaciones | Practica astasa" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Una mirada a las correlaciones | Practica astasa" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Una mirada a las correlaciones | Practica astasa" />
+  
+  
+  
+
+<meta name="author" content="Esteban Ballestero Alfaro" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="atipicidades.html"/>
+<link rel="next" href="bases-para-la-regresión.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="chapter" data-level="1" data-path="correlaciones-y-graficos-con-correlaciones.html"><a href="correlaciones-y-graficos-con-correlaciones.html"><i class="fa fa-check"></i><b>1</b> Correlaciones y graficos con correlaciones</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="correlaciones-y-graficos-con-correlaciones.html"><a href="correlaciones-y-graficos-con-correlaciones.html#qué-tipo-de-objeto-es-c"><i class="fa fa-check"></i><b>1.1</b> ¿Qué tipo de objeto es c?</a></li>
+<li class="chapter" data-level="1.2" data-path="correlaciones-y-graficos-con-correlaciones.html"><a href="correlaciones-y-graficos-con-correlaciones.html#pasamos-a-la-sección-de-modelaje."><i class="fa fa-check"></i><b>1.2</b> Pasamos a la sección de modelaje.</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="practica-utilizando-astasa-anexos.html"><a href="practica-utilizando-astasa-anexos.html"><i class="fa fa-check"></i><b>2</b> Practica utilizando astasa (Anexos)</a></li>
+<li class="chapter" data-level="3" data-path="dia-1.html"><a href="dia-1.html"><i class="fa fa-check"></i><b>3</b> Dia 1</a></li>
+<li class="chapter" data-level="4" data-path="exploración-de-datos.html"><a href="exploración-de-datos.html"><i class="fa fa-check"></i><b>4</b> Exploración de datos</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="exploración-de-datos.html"><a href="exploración-de-datos.html#qué-interesa-conocer-de-los-datos"><i class="fa fa-check"></i><b>4.1</b> ¿Qué interesa conocer de los datos?</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="una-mirada-a-los-datos.html"><a href="una-mirada-a-los-datos.html"><i class="fa fa-check"></i><b>5</b> Una mirada a los datos</a></li>
+<li class="chapter" data-level="6" data-path="atipicidades.html"><a href="atipicidades.html"><i class="fa fa-check"></i><b>6</b> Atipicidades</a></li>
+<li class="chapter" data-level="7" data-path="una-mirada-a-las-correlaciones.html"><a href="una-mirada-a-las-correlaciones.html"><i class="fa fa-check"></i><b>7</b> Una mirada a las correlaciones</a></li>
+<li class="chapter" data-level="8" data-path="bases-para-la-regresión.html"><a href="bases-para-la-regresión.html"><i class="fa fa-check"></i><b>8</b> Bases para la regresión</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Practica astasa</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="una-mirada-a-las-correlaciones" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Una mirada a las correlaciones<a href="una-mirada-a-las-correlaciones.html#una-mirada-a-las-correlaciones" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><code>R</code> permite constuir matrices gráficas con información variada de los datos, como por ejemplo los gráficos de densidad, gráfico de dispersión y correlaciones que facilitan ese acercamiento a la base de datos a trabajar.</p>
+<p>Este gráfico se construye con el paquete GGally:</p>
+<p>ggpairs(datos[filas, c(“Columna 1”, “Columna2”,…, “Columna n”)])</p>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="una-mirada-a-las-correlaciones.html#cb94-1" tabindex="-1"></a><span class="fu">ggpairs</span>(aire[, <span class="fu">c</span>(<span class="st">&quot;Ozone&quot;</span>, <span class="st">&quot;Solar.R&quot;</span>,<span class="st">&quot;Wind&quot;</span>, <span class="st">&quot;Temp&quot;</span>)])</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-69-1.png" width="672" /></p>
+<p>Veamos otras opciones de matrices de gráficos de resumen de datos usando los paquetes <code>peformanceanalitycs</code> y <code>psych</code>:</p>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="una-mirada-a-las-correlaciones.html#cb95-1" tabindex="-1"></a><span class="fu">chart.Correlation</span>(aire[, <span class="fu">c</span>(<span class="st">&quot;Ozone&quot;</span>, <span class="st">&quot;Solar.R&quot;</span>,<span class="st">&quot;Wind&quot;</span>, <span class="st">&quot;Temp&quot;</span>)], <span class="at">histogram=</span><span class="cn">TRUE</span>, <span class="at">pch=</span><span class="dv">19</span>)</span></code></pre></div>
+<pre><code>## Warning in par(usr): argument 1 does not name a graphical parameter
+## Warning in par(usr): argument 1 does not name a graphical parameter
+## Warning in par(usr): argument 1 does not name a graphical parameter
+## Warning in par(usr): argument 1 does not name a graphical parameter
+## Warning in par(usr): argument 1 does not name a graphical parameter
+## Warning in par(usr): argument 1 does not name a graphical parameter</code></pre>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="una-mirada-a-las-correlaciones.html#cb97-1" tabindex="-1"></a><span class="fu">pairs.panels</span>(aire[, <span class="fu">c</span>(<span class="st">&quot;Ozone&quot;</span>, <span class="st">&quot;Solar.R&quot;</span>,<span class="st">&quot;Wind&quot;</span>, <span class="st">&quot;Temp&quot;</span>)], <span class="at">scale=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
+<p>Seguidamente se hace un análisis para las correlaciones, la idea es ver si entre las variables numéricas presentes existe algún tipo de correlación fuerte.</p>
+<p>Primeramente, trabajaremos con la base de datos original, es decir, sin la nueva columna creada para el Mes:</p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="una-mirada-a-las-correlaciones.html#cb98-1" tabindex="-1"></a>calidadaire <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(airquality)</span>
+<span id="cb98-2"><a href="una-mirada-a-las-correlaciones.html#cb98-2" tabindex="-1"></a><span class="fu">head</span>(calidadaire)</span></code></pre></div>
+<pre><code>##   Ozone Solar.R Wind Temp Month Day
+## 1    41     190  7.4   67     5   1
+## 2    36     118  8.0   72     5   2
+## 3    12     149 12.6   74     5   3
+## 4    18     313 11.5   62     5   4
+## 7    23     299  8.6   65     5   7
+## 8    19      99 13.8   59     5   8</code></pre>
+<p>Podemos usar el operador <em>pipe</em> para filtar nuestra base de datos, como se muestra acontinuación:</p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="una-mirada-a-las-correlaciones.html#cb100-1" tabindex="-1"></a>calidadaire <span class="ot">&lt;-</span> airquality <span class="sc">%&gt;%</span> <span class="co"># se indica cuál es la base de datos usada</span></span>
+<span id="cb100-2"><a href="una-mirada-a-las-correlaciones.html#cb100-2" tabindex="-1"></a>  <span class="fu">drop_na</span>() <span class="sc">%&gt;%</span> <span class="co"># se eliminan los na, toda la fila</span></span>
+<span id="cb100-3"><a href="una-mirada-a-las-correlaciones.html#cb100-3" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(Month, Day)) <span class="co"># eliminamos las columnas Month y Day</span></span></code></pre></div>
+<p>Es impornte explicar el significado de la instrucción dplyr::select.</p>
+<p>Ocurre con frecuencia en <code>R</code> que muchos paquetes podrían tener una función con el mismo nombre, entonces, cuando se llama a la función, que en este ejemplo es <strong>select</strong>, y queremos que sea <strong>select</strong> del paquete <code>dplyr</code> específicamente y no de otro paquete, entonces se debe indicar el nombre del paquete seguido por el operardor <strong>::</strong> y luego la función a usar.</p>
+<p>Note que los datos ya no contienen las celdas vacías ni tampoco las columnas de <em>Month</em> y <em>Day</em>.</p>
+<p>Es importante tomar en cuenta que la correlación lineal es una métrica sobre la relación lineal entre dos variables, no es un modelo como si lo es una regresión lineal.</p>
+<p>Hay varias formas de ver las correlaciones en <code>R</code>, seguidamente se presentan varias opciones:</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="una-mirada-a-las-correlaciones.html#cb101-1" tabindex="-1"></a>cor <span class="ot">&lt;-</span> <span class="fu">correlation</span>(calidadaire)</span>
+<span id="cb101-2"><a href="una-mirada-a-las-correlaciones.html#cb101-2" tabindex="-1"></a>cor</span></code></pre></div>
+<pre><code>## # Correlation Matrix (pearson-method)
+## 
+## Parameter1 | Parameter2 |     r |         95% CI | t(109) |         p
+## ---------------------------------------------------------------------
+## Ozone      |    Solar.R |  0.35 | [ 0.17,  0.50] |   3.88 | &lt; .001***
+## Ozone      |       Wind | -0.61 | [-0.72, -0.48] |  -8.09 | &lt; .001***
+## Ozone      |       Temp |  0.70 | [ 0.59,  0.78] |  10.19 | &lt; .001***
+## Solar.R    |       Wind | -0.13 | [-0.31,  0.06] |  -1.34 | 0.183    
+## Solar.R    |       Temp |  0.29 | [ 0.11,  0.46] |   3.21 | 0.003**  
+## Wind       |       Temp | -0.50 | [-0.63, -0.34] |  -5.98 | &lt; .001***
+## 
+## p-value adjustment method: Holm (1979)
+## Observations: 111</code></pre>
+<p>Podríamos resumir esta tabla:</p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="una-mirada-a-las-correlaciones.html#cb103-1" tabindex="-1"></a><span class="fu">summary</span>(cor)</span></code></pre></div>
+<pre><code>## # Correlation Matrix (pearson-method)
+## 
+## Parameter |     Temp |     Wind | Solar.R
+## -----------------------------------------
+## Ozone     |  0.70*** | -0.61*** | 0.35***
+## Solar.R   |   0.29** |    -0.13 |        
+## Wind      | -0.50*** |          |        
+## 
+## p-value adjustment method: Holm (1979)</code></pre>
+<p>Graficar los datos de la matriz resultante de la correlación es posible, pero primero se debe organizar la infomración para que la función <em>plot</em> puede interpretarlos correctamente. Note que el resultado anterior del <em>summary</em> muestra una matriz triangular, pero el comando <em>plot</em> necesita que esta matriz sea cuadrada para poder graficar correctamente.</p>
+<p>La siguiente instrucción, permite hacer cuadrada la matriz de correlaciones:</p>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="una-mirada-a-las-correlaciones.html#cb105-1" tabindex="-1"></a><span class="fu">summary</span>(cor, <span class="at">redundant =</span> T)</span></code></pre></div>
+<pre><code>## # Correlation Matrix (pearson-method)
+## 
+## Parameter |    Ozone | Solar.R |     Wind |     Temp
+## ----------------------------------------------------
+## Ozone     |          | 0.35*** | -0.61*** |  0.70***
+## Solar.R   |  0.35*** |         |    -0.13 |   0.29**
+## Wind      | -0.61*** |   -0.13 |          | -0.50***
+## Temp      |  0.70*** |  0.29** | -0.50*** |         
+## 
+## p-value adjustment method: Holm (1979)</code></pre>
+<p>Se podría graficar de la siguiente manera:</p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="una-mirada-a-las-correlaciones.html#cb107-1" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">summary</span>(cor, <span class="at">redundant =</span> T), <span class="at">show_value =</span> T, <span class="at">show_p =</span> T)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
+<p>Una forma más elegante de hacer este gráfico, es a partir del operador <em>pipe</em>:</p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="una-mirada-a-las-correlaciones.html#cb108-1" tabindex="-1"></a>cor <span class="sc">%&gt;%</span></span>
+<span id="cb108-2"><a href="una-mirada-a-las-correlaciones.html#cb108-2" tabindex="-1"></a>  <span class="fu">summary</span>(<span class="at">redundant =</span><span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb108-3"><a href="una-mirada-a-las-correlaciones.html#cb108-3" tabindex="-1"></a>  <span class="fu">plot</span>(<span class="at">show_value =</span> T, <span class="at">show_p  =</span> T)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
+<p>Se puede cambiar la forma de la geometría:</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="una-mirada-a-las-correlaciones.html#cb109-1" tabindex="-1"></a>cor <span class="sc">%&gt;%</span></span>
+<span id="cb109-2"><a href="una-mirada-a-las-correlaciones.html#cb109-2" tabindex="-1"></a>  <span class="fu">summary</span>(<span class="at">redundant =</span><span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb109-3"><a href="una-mirada-a-las-correlaciones.html#cb109-3" tabindex="-1"></a>  <span class="fu">plot</span>(<span class="at">show_value =</span> T, <span class="at">show_p  =</span> T, <span class="at">type =</span> <span class="st">&quot;tile&quot;</span>)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
+<p>El siguiente gráfico de correlación se base en un modelo gaussiano, requiere el paquete <code>ggraph</code></p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="una-mirada-a-las-correlaciones.html#cb110-1" tabindex="-1"></a>calidadaire  <span class="sc">%&gt;%</span></span>
+<span id="cb110-2"><a href="una-mirada-a-las-correlaciones.html#cb110-2" tabindex="-1"></a>  <span class="fu">correlation</span>(<span class="at">partial =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb110-3"><a href="una-mirada-a-las-correlaciones.html#cb110-3" tabindex="-1"></a>  <span class="fu">plot</span>()</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="atipicidades.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bases-para-la-regresión.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
