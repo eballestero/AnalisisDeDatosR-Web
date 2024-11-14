@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Correlaciones y graficos con correlaciones | AnalisisdeDatos.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Correlaciones y graficos con correlaciones | AnalisisdeDatos.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Correlaciones y graficos con correlaciones | AnalisisdeDatos.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="practica-utilizando-astasa-anexos.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="chapter" data-level="1" data-path="correlaciones-y-graficos-con-correlaciones.html"><a href="correlaciones-y-graficos-con-correlaciones.html"><i class="fa fa-check"></i><b>1</b> Correlaciones y graficos con correlaciones</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="correlaciones-y-graficos-con-correlaciones.html"><a href="correlaciones-y-graficos-con-correlaciones.html#qué-tipo-de-objeto-es-c"><i class="fa fa-check"></i><b>1.1</b> ¿Qué tipo de objeto es c?</a></li>
+<li class="chapter" data-level="1.2" data-path="correlaciones-y-graficos-con-correlaciones.html"><a href="correlaciones-y-graficos-con-correlaciones.html#pasamos-a-la-sección-de-modelaje."><i class="fa fa-check"></i><b>1.2</b> Pasamos a la sección de modelaje.</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="practica-utilizando-astasa-anexos.html"><a href="practica-utilizando-astasa-anexos.html"><i class="fa fa-check"></i><b>2</b> Practica utilizando astasa (Anexos)</a></li>
+<li class="chapter" data-level="3" data-path="exploracion-y-visualización-de-datos.html"><a href="exploracion-y-visualización-de-datos.html"><i class="fa fa-check"></i><b>3</b> Exploracion y Visualización de Datos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exploracion-y-visualización-de-datos.html"><a href="exploracion-y-visualización-de-datos.html#exploración-de-datos"><i class="fa fa-check"></i><b>3.1</b> Exploración de datos</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="exploracion-y-visualización-de-datos.html"><a href="exploracion-y-visualización-de-datos.html#que-interesa-conocer-de-los-datos"><i class="fa fa-check"></i><b>3.1.1</b> ¿Que interesa conocer de los datos?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="exploracion-y-visualización-de-datos.html"><a href="exploracion-y-visualización-de-datos.html#una-mirada-a-los-datos"><i class="fa fa-check"></i><b>3.2</b> Una mirada a los datos</a></li>
+<li class="chapter" data-level="3.3" data-path="exploracion-y-visualización-de-datos.html"><a href="exploracion-y-visualización-de-datos.html#atipicidades"><i class="fa fa-check"></i><b>3.3</b> Atipicidades</a></li>
+<li class="chapter" data-level="3.4" data-path="exploracion-y-visualización-de-datos.html"><a href="exploracion-y-visualización-de-datos.html#una-mirada-a-las-correlaciones"><i class="fa fa-check"></i><b>3.4</b> Una mirada a las correlaciones</a></li>
+<li class="chapter" data-level="3.5" data-path="exploracion-y-visualización-de-datos.html"><a href="exploracion-y-visualización-de-datos.html#bases-para-la-regresion"><i class="fa fa-check"></i><b>3.5</b> Bases para la regresion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="modelos-lineales.html"><a href="modelos-lineales.html"><i class="fa fa-check"></i><b>4</b> Modelos Lineales</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="modelos-lineales.html"><a href="modelos-lineales.html#modelo-lineal-general"><i class="fa fa-check"></i><b>4.1</b> Modelo lineal general</a></li>
+<li class="chapter" data-level="4.2" data-path="modelos-lineales.html"><a href="modelos-lineales.html#qué-es-un-modelo"><i class="fa fa-check"></i><b>4.2</b> ¿Qué es un modelo?</a></li>
+<li class="chapter" data-level="4.3" data-path="modelos-lineales.html"><a href="modelos-lineales.html#regresion-lineal-simple"><i class="fa fa-check"></i><b>4.3</b> Regresion lineal simple</a></li>
+<li class="chapter" data-level="4.4" data-path="modelos-lineales.html"><a href="modelos-lineales.html#supuesto-de-normalidad"><i class="fa fa-check"></i><b>4.4</b> Supuesto de Normalidad</a></li>
+<li class="chapter" data-level="4.5" data-path="modelos-lineales.html"><a href="modelos-lineales.html#supuesto-de-homocedasticidad-de-varianzas"><i class="fa fa-check"></i><b>4.5</b> Supuesto de Homocedasticidad de varianzas</a></li>
+<li class="chapter" data-level="4.6" data-path="modelos-lineales.html"><a href="modelos-lineales.html#supuesto-de-independencia"><i class="fa fa-check"></i><b>4.6</b> Supuesto de Independencia</a></li>
+<li class="chapter" data-level="4.7" data-path="modelos-lineales.html"><a href="modelos-lineales.html#tecnicas-para-corregir-la-heterocedasticidad-de-varianzas"><i class="fa fa-check"></i><b>4.7</b> Tecnicas para corregir la heterocedasticidad de varianzas</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="herramientas-para-visualizar-datos.html"><a href="herramientas-para-visualizar-datos.html"><i class="fa fa-check"></i><b>5</b> Herramientas para visualizar datos</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="herramientas-para-visualizar-datos.html"><a href="herramientas-para-visualizar-datos.html#chunk-de-librerías"><i class="fa fa-check"></i><b>5.1</b> Chunk de librerías</a></li>
+<li class="chapter" data-level="5.2" data-path="herramientas-para-visualizar-datos.html"><a href="herramientas-para-visualizar-datos.html#carga-de-la-base-de-datos"><i class="fa fa-check"></i><b>5.2</b> Carga de la base de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html"><i class="fa fa-check"></i><b>6</b> Visualización de Datos con ggplot2</a></li>
+<li class="chapter" data-level="7" data-path="gráficos-de-barras.html"><a href="gráficos-de-barras.html"><i class="fa fa-check"></i><b>7</b> Gráficos de Barras</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="gráficos-de-barras.html"><a href="gráficos-de-barras.html#requerimientos"><i class="fa fa-check"></i><b>7.1</b> Requerimientos:</a></li>
+<li class="chapter" data-level="7.2" data-path="gráficos-de-barras.html"><a href="gráficos-de-barras.html#legend-siempre-nos-pide-los-siguientes-argumentos."><i class="fa fa-check"></i><b>7.2</b> legend() siempre nos pide los siguientes argumentos.</a></li>
+<li class="chapter" data-level="7.3" data-path="gráficos-de-barras.html"><a href="gráficos-de-barras.html#grafico-de-pastel"><i class="fa fa-check"></i><b>7.3</b> Grafico de pastel</a></li>
+<li class="chapter" data-level="7.4" data-path="gráficos-de-barras.html"><a href="gráficos-de-barras.html#gráfico-de-dona"><i class="fa fa-check"></i><b>7.4</b> Gráfico de dona</a></li>
+<li class="chapter" data-level="7.5" data-path="gráficos-de-barras.html"><a href="gráficos-de-barras.html#para-practicar"><i class="fa fa-check"></i><b>7.5</b> Para practicar</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="diagramas-de-cajas-boxplots.html"><a href="diagramas-de-cajas-boxplots.html"><i class="fa fa-check"></i><b>8</b> Diagramas de cajas (Boxplots)</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="diagramas-de-cajas-boxplots.html"><a href="diagramas-de-cajas-boxplots.html#chunk-para-librerías"><i class="fa fa-check"></i><b>8.1</b> Chunk para librerías</a></li>
+<li class="chapter" data-level="8.2" data-path="diagramas-de-cajas-boxplots.html"><a href="diagramas-de-cajas-boxplots.html#pie-chart"><i class="fa fa-check"></i><b>8.2</b> Pie Chart</a></li>
+<li class="chapter" data-level="8.3" data-path="diagramas-de-cajas-boxplots.html"><a href="diagramas-de-cajas-boxplots.html#paleta-de-colores"><i class="fa fa-check"></i><b>8.3</b> Paleta de colores</a></li>
+<li class="chapter" data-level="8.4" data-path="diagramas-de-cajas-boxplots.html"><a href="diagramas-de-cajas-boxplots.html#diagrama-de-cajas"><i class="fa fa-check"></i><b>8.4</b> Diagrama de cajas</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="correlaciones-y-graficos-con-correlaciones" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Correlaciones y graficos con correlaciones<a href="correlaciones-y-graficos-con-correlaciones.html#correlaciones-y-graficos-con-correlaciones" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb1-1" tabindex="-1"></a><span class="fu">library</span>(corrplot) <span class="co"># paquete para crear gráficos de correlaciones</span></span>
+<span id="cb1-2"><a href="correlaciones-y-graficos-con-correlaciones.html#cb1-2" tabindex="-1"></a><span class="fu">library</span>(corrr) <span class="co"># para usar la función correlate</span></span>
+<span id="cb1-3"><a href="correlaciones-y-graficos-con-correlaciones.html#cb1-3" tabindex="-1"></a><span class="fu">library</span>(ggcorrplot) <span class="co"># paquete para crear gráficos de correlaciones</span></span>
+<span id="cb1-4"><a href="correlaciones-y-graficos-con-correlaciones.html#cb1-4" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># Caraga contiene varias funciones y ggplot2, al cargarlo se cargan todas. Si solo se desea usar ggplot 2, puede cargarse por separado</span></span>
+<span id="cb1-5"><a href="correlaciones-y-graficos-con-correlaciones.html#cb1-5" tabindex="-1"></a><span class="fu">library</span>(GGally) <span class="co"># para usar la función ggcorr()</span></span>
+<span id="cb1-6"><a href="correlaciones-y-graficos-con-correlaciones.html#cb1-6" tabindex="-1"></a><span class="fu">library</span>(visreg) <span class="co"># paquete para hacer una exloración inicial de los datos</span></span>
+<span id="cb1-7"><a href="correlaciones-y-graficos-con-correlaciones.html#cb1-7" tabindex="-1"></a><span class="fu">library</span>(DataExplorer) <span class="co">#Para usar la función plot_missing</span></span>
+<span id="cb1-8"><a href="correlaciones-y-graficos-con-correlaciones.html#cb1-8" tabindex="-1"></a><span class="fu">library</span>(visdat)</span></code></pre></div>
+<p>Traemos un set de datos para trabajar</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb2-1" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;airquality&quot;</span>)</span></code></pre></div>
+<p>vis_data permite rápidamente identificar la cantidad de NA, pero además, hace una clasificación de tods los tipos de variables presentes en los datos.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb3-1" tabindex="-1"></a><span class="fu">vis_dat</span>(airquality)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb4-1" tabindex="-1"></a>aire <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(airquality)</span>
+<span id="cb4-2"><a href="correlaciones-y-graficos-con-correlaciones.html#cb4-2" tabindex="-1"></a><span class="fu">vis_dat</span>(aire)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>La función cor viene por defecto en R, no se requiere de paquete alguno. Algunos paquetes trabajan la correlación, pero con otras herramientas adicionales</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb5-1" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="fu">cor</span>(aire)</span>
+<span id="cb5-2"><a href="correlaciones-y-graficos-con-correlaciones.html#cb5-2" tabindex="-1"></a>c</span></code></pre></div>
+<pre><code>##                Ozone     Solar.R        Wind       Temp        Month
+## Ozone    1.000000000  0.34834169 -0.61249658  0.6985414  0.142885168
+## Solar.R  0.348341693  1.00000000 -0.12718345  0.2940876 -0.074066683
+## Wind    -0.612496576 -0.12718345  1.00000000 -0.4971897 -0.194495804
+## Temp     0.698541410  0.29408764 -0.49718972  1.0000000  0.403971709
+## Month    0.142885168 -0.07406668 -0.19449580  0.4039717  1.000000000
+## Day     -0.005189769 -0.05775380  0.04987102 -0.0965458 -0.009001079
+##                  Day
+## Ozone   -0.005189769
+## Solar.R -0.057753801
+## Wind     0.049871017
+## Temp    -0.096545800
+## Month   -0.009001079
+## Day      1.000000000</code></pre>
+<p>Como aparecen los datos con varios decimales, se puede reducir el número de decimales aplicando un redondeo:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb7-1" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">cor</span>(aire),<span class="dv">2</span>) <span class="co"># Se almacena esta correlación en una variable c</span></span>
+<span id="cb7-2"><a href="correlaciones-y-graficos-con-correlaciones.html#cb7-2" tabindex="-1"></a>c</span></code></pre></div>
+<pre><code>##         Ozone Solar.R  Wind  Temp Month   Day
+## Ozone    1.00    0.35 -0.61  0.70  0.14 -0.01
+## Solar.R  0.35    1.00 -0.13  0.29 -0.07 -0.06
+## Wind    -0.61   -0.13  1.00 -0.50 -0.19  0.05
+## Temp     0.70    0.29 -0.50  1.00  0.40 -0.10
+## Month    0.14   -0.07 -0.19  0.40  1.00 -0.01
+## Day     -0.01   -0.06  0.05 -0.10 -0.01  1.00</code></pre>
+<div id="qué-tipo-de-objeto-es-c" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> ¿Qué tipo de objeto es c?<a href="correlaciones-y-graficos-con-correlaciones.html#qué-tipo-de-objeto-es-c" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb9-1" tabindex="-1"></a><span class="fu">class</span>(c)</span></code></pre></div>
+<pre><code>## [1] &quot;matrix&quot; &quot;array&quot;</code></pre>
+<p>Note que <em>c</em> es una matriz, por tanto no se puede trabajar en ggplot2, por lo que primeramente se debe transformar <em>c</em>en otro tipo de objeto llamado <strong>dataframe</strong>.</p>
+<p>Hay paquetes como <em>cor</em>, que usamos previamente, que hace el cambio a dataframe de manera interna automáticamente, pero otros requieren de una previa transformación:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb11-1" tabindex="-1"></a>c_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(c)</span>
+<span id="cb11-2"><a href="correlaciones-y-graficos-con-correlaciones.html#cb11-2" tabindex="-1"></a>c_df</span></code></pre></div>
+<pre><code>##         Ozone Solar.R  Wind  Temp Month   Day
+## Ozone    1.00    0.35 -0.61  0.70  0.14 -0.01
+## Solar.R  0.35    1.00 -0.13  0.29 -0.07 -0.06
+## Wind    -0.61   -0.13  1.00 -0.50 -0.19  0.05
+## Temp     0.70    0.29 -0.50  1.00  0.40 -0.10
+## Month    0.14   -0.07 -0.19  0.40  1.00 -0.01
+## Day     -0.01   -0.06  0.05 -0.10 -0.01  1.00</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb13-1" tabindex="-1"></a><span class="fu">class</span>(c_df)</span></code></pre></div>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+<p>El siguiente caso, corrplot, puede trabajar con la matriz, sin necesidad de cinvertirla en dataframe</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb15-1" tabindex="-1"></a><span class="fu">corrplot</span>(c)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb16-1" tabindex="-1"></a><span class="fu">corrplot</span>(c, <span class="at">method =</span> <span class="st">&quot;number&quot;</span>)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb17-1" tabindex="-1"></a><span class="fu">corrplot</span>(c, <span class="at">method =</span> <span class="st">&quot;square&quot;</span>)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb18-1" tabindex="-1"></a><span class="fu">corrplot</span>(c, <span class="at">method =</span> <span class="st">&quot;ellipse&quot;</span>)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb19-1" tabindex="-1"></a><span class="fu">corrplot</span>(c, <span class="at">method =</span> <span class="st">&quot;pie&quot;</span>)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb20-1" tabindex="-1"></a><span class="fu">corrplot</span>(c, <span class="at">method =</span> <span class="st">&quot;shade&quot;</span>)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p>En los gráficos anteriores, note que la matriz es simétrica con respecto a la diagonal principal, por lo que tanto arriba de ella como debajo de ella, tendríamos la misma información. Según los gustos del analista de datos, podría únicamente considerar trabajar con solamente con el triángulo superior o el triángulo inferior como se muestra a continuación</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb21-1" tabindex="-1"></a><span class="fu">corrplot</span>(c, <span class="at">method =</span> <span class="st">&quot;shade&quot;</span>, <span class="at">type =</span> <span class="st">&quot;upper&quot;</span>)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb22-1" tabindex="-1"></a><span class="fu">corrplot</span>(c, <span class="at">method =</span> <span class="st">&quot;shade&quot;</span>, <span class="at">type =</span> <span class="st">&quot;low&quot;</span>)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p>Otras funciones que trabajan directamente con la matriz de correlaciones:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb23-1" tabindex="-1"></a><span class="fu">ggcorrplot</span>(c)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb24-1" tabindex="-1"></a><span class="fu">ggcorrplot</span>(c, <span class="at">method =</span> <span class="st">&quot;circle&quot;</span>)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb25-1" tabindex="-1"></a><span class="fu">ggcorrplot</span>(c, <span class="at">method =</span> <span class="st">&quot;square&quot;</span>, <span class="at">lab =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p>Seguidamente usamos la función <em>correlate()</em> del paquete corrr, para crear una correlación tipo <em>dataframe</em></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb26-1" tabindex="-1"></a><span class="fu">correlate</span>(aire)</span></code></pre></div>
+<pre><code>## Correlation computed with
+## • Method: &#39;pearson&#39;
+## • Missing treated using: &#39;pairwise.complete.obs&#39;</code></pre>
+<pre><code>## # A tibble: 6 × 7
+##   term       Ozone Solar.R    Wind    Temp    Month      Day
+##   &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+## 1 Ozone   NA        0.348  -0.612   0.699   0.143   -0.00519
+## 2 Solar.R  0.348   NA      -0.127   0.294  -0.0741  -0.0578 
+## 3 Wind    -0.612   -0.127  NA      -0.497  -0.194    0.0499 
+## 4 Temp     0.699    0.294  -0.497  NA       0.404   -0.0965 
+## 5 Month    0.143   -0.0741 -0.194   0.404  NA       -0.00900
+## 6 Day     -0.00519 -0.0578  0.0499 -0.0965 -0.00900 NA</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb29-1" tabindex="-1"></a>cor_df <span class="ot">&lt;-</span> <span class="fu">correlate</span>(aire)</span></code></pre></div>
+<pre><code>## Correlation computed with
+## • Method: &#39;pearson&#39;
+## • Missing treated using: &#39;pairwise.complete.obs&#39;</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb31-1" tabindex="-1"></a>cor_df</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 7
+##   term       Ozone Solar.R    Wind    Temp    Month      Day
+##   &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+## 1 Ozone   NA        0.348  -0.612   0.699   0.143   -0.00519
+## 2 Solar.R  0.348   NA      -0.127   0.294  -0.0741  -0.0578 
+## 3 Wind    -0.612   -0.127  NA      -0.497  -0.194    0.0499 
+## 4 Temp     0.699    0.294  -0.497  NA       0.404   -0.0965 
+## 5 Month    0.143   -0.0741 -0.194   0.404  NA       -0.00900
+## 6 Day     -0.00519 -0.0578  0.0499 -0.0965 -0.00900 NA</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb33-1" tabindex="-1"></a><span class="fu">class</span>(cor_df)</span></code></pre></div>
+<pre><code>## [1] &quot;cor_df&quot;     &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb35-1" tabindex="-1"></a><span class="fu">rplot</span>(cor_df)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb36-1" tabindex="-1"></a><span class="fu">rplot</span>(cor_df, <span class="at">colours =</span> <span class="fu">c</span>(<span class="st">&quot;yellow&quot;</span>,<span class="st">&quot;white&quot;</span>,<span class="st">&quot;red&quot;</span>))</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-24-1.png" width="672" />
+Cambiando el número de <strong>shape</strong>, se pueden ver otras formas</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb37-1" tabindex="-1"></a><span class="fu">rplot</span>(cor_df, <span class="at">shape =</span> <span class="dv">2</span>,  <span class="at">colours =</span> <span class="fu">c</span>(<span class="st">&quot;yellow&quot;</span>,<span class="st">&quot;white&quot;</span>,<span class="st">&quot;red&quot;</span>))</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb38-1" tabindex="-1"></a><span class="fu">rplot</span>(cor_df, <span class="at">shape =</span> <span class="dv">2</span>,  <span class="at">colours =</span> <span class="fu">c</span>(<span class="st">&quot;yellow&quot;</span>,<span class="st">&quot;white&quot;</span>,<span class="st">&quot;red&quot;</span>), <span class="at">print_cor =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>El siguiente gráfico es una variante para ilustrar correlaciones, a partir de <em>flechas</em> que señalan las conexiones entre las diferentes variables:</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb39-1" tabindex="-1"></a><span class="co"># La función network_plot, pertenece al paquete corrr</span></span>
+<span id="cb39-2"><a href="correlaciones-y-graficos-con-correlaciones.html#cb39-2" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="correlaciones-y-graficos-con-correlaciones.html#cb39-3" tabindex="-1"></a><span class="fu">network_plot</span>(cor_df)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p><strong>Nota</strong>, variable Ozone, tiene la primera “O” en mayúscula</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb40-1" tabindex="-1"></a><span class="fu">focus</span>(cor_df, Ozone)</span></code></pre></div>
+<pre><code>## # A tibble: 5 × 2
+##   term       Ozone
+##   &lt;chr&gt;      &lt;dbl&gt;
+## 1 Solar.R  0.348  
+## 2 Wind    -0.612  
+## 3 Temp     0.699  
+## 4 Month    0.143  
+## 5 Day     -0.00519</code></pre>
+<p>Se puede cambiar el nivel de tolerancia de la correlación, para que muestre en la gráfico solamente las correlaciones que estén por debajo de ese mínimo</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb42-1" tabindex="-1"></a><span class="co"># min_cor indica un mínimo para la correlación. Las variables con correlación por debajo de este mínimo, no serán representadas en el gráfico.</span></span>
+<span id="cb42-2"><a href="correlaciones-y-graficos-con-correlaciones.html#cb42-2" tabindex="-1"></a></span>
+<span id="cb42-3"><a href="correlaciones-y-graficos-con-correlaciones.html#cb42-3" tabindex="-1"></a><span class="fu">network_plot</span>(cor_df, <span class="at">min_cor =</span> <span class="fl">0.1</span>)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-29-1.png" width="672" />
+Usando el paquete GGally, con la matriz c</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb43-1" tabindex="-1"></a><span class="fu">ggcorr</span>(c)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb44-1" tabindex="-1"></a><span class="fu">ggcorr</span>(c, <span class="at">label =</span> <span class="cn">TRUE</span>, <span class="at">lavel_alpha =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb45-1" tabindex="-1"></a><span class="fu">cor.test</span>(aire<span class="sc">$</span>Ozone, aire<span class="sc">$</span>Temp)</span></code></pre></div>
+<pre><code>## 
+##  Pearson&#39;s product-moment correlation
+## 
+## data:  aire$Ozone and aire$Temp
+## t = 10.192, df = 109, p-value &lt; 2.2e-16
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  0.5888139 0.7829869
+## sample estimates:
+##       cor 
+## 0.6985414</code></pre>
+<p>Me indica que la correlación es diferente de cero, algo que se puede ver con el Intervalo de Confianza. Lo más útil es el intervalo de confianza</p>
+<p>Para ver un scatter plot y ver las relaciones que se dan entre las variables, se puede realizar los siguiente:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb47-1" tabindex="-1"></a><span class="fu">ggpairs</span>(aire)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-33-1.png" width="672" />
+Para eliminar el mensaje extenso que aparece, usar como sigue:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb48-1" tabindex="-1"></a><span class="fu">ggpairs</span>(aire)</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-34-1.png" width="672" />
+Lo que aparece en las diagonales, son un <strong>density plot</strong> de cada variable de manera individual. La matriz es simétrica, por lo que a los lados de la diagonal se puede ver el gráfico de dispersión con sus correlaciones</p>
+<p>Seguidamente se crea un gráfico de dispersión entre la variables <em>Temp</em> y <em>Ozone</em></p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb49-1" tabindex="-1"></a>g9 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(aire, <span class="fu">aes</span>(<span class="at">x =</span> Temp, <span class="at">y =</span> Ozone))</span>
+<span id="cb49-2"><a href="correlaciones-y-graficos-con-correlaciones.html#cb49-2" tabindex="-1"></a>g9 <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<p>Gráfico de dispersión de la variable del <em>Ozone</em> con respecto a <em>wind</em></p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb50-1" tabindex="-1"></a>g9 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(aire, <span class="fu">aes</span>(<span class="at">x =</span> Wind, <span class="at">y =</span> Ozone))</span>
+<span id="cb50-2"><a href="correlaciones-y-graficos-con-correlaciones.html#cb50-2" tabindex="-1"></a>g9 <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+</div>
+<div id="pasamos-a-la-sección-de-modelaje." class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Pasamos a la sección de modelaje.<a href="correlaciones-y-graficos-con-correlaciones.html#pasamos-a-la-sección-de-modelaje." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Buscaremos seguidamente un modelo de regresión para ajustar los datos:</p>
+<p><strong>Variable Respuesta</strong> (equivale a la conocida variable dependiente) vs <strong>variables explicativas</strong> (conocida como variable independiente).</p>
+<p>En <strong>correlación no importa</strong> el orden de esta relación de las variables, pero en caso de <strong>regresión, sí es importante el orden las variables</strong>.</p>
+<p><strong>Variable de respuesta:</strong> se les llamaba variable dependiente, pero en estadística no se acostumbra usar ese nombre: <em>Response variable vs explaining variable</em>, parece que es como una nueva nomemclatura que aparece en los artículos modernos.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb51-1" tabindex="-1"></a><span class="co"># La función lm crea un modelo lineal (Lineal Model)</span></span>
+<span id="cb51-2"><a href="correlaciones-y-graficos-con-correlaciones.html#cb51-2" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Ozone<span class="sc">~</span>Temp, <span class="at">data =</span> aire)</span>
+<span id="cb51-3"><a href="correlaciones-y-graficos-con-correlaciones.html#cb51-3" tabindex="-1"></a><span class="fu">summary</span>(mod1)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = Ozone ~ Temp, data = aire)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -40.922 -17.459  -0.874  10.444 118.078 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -147.6461    18.7553  -7.872 2.76e-12 ***
+## Temp           2.4391     0.2393  10.192  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 23.92 on 109 degrees of freedom
+## Multiple R-squared:  0.488,  Adjusted R-squared:  0.4833 
+## F-statistic: 103.9 on 1 and 109 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>Los datos que muestra es para un modelo de y= a + bx. Los asteriscos que aparecen se explican en <em>singnif. codes</em></p>
+<p>Seguidamente, se grafica el modelo lineal usando <em>ggplot2</em></p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb53-1" tabindex="-1"></a>g9 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(aire, <span class="fu">aes</span>(<span class="at">x =</span> Temp, <span class="at">y =</span> Ozone))</span>
+<span id="cb53-2"><a href="correlaciones-y-graficos-con-correlaciones.html#cb53-2" tabindex="-1"></a>g9 <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb53-3"><a href="correlaciones-y-graficos-con-correlaciones.html#cb53-3" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<p>Se puede usar línea suavisada, la cuál si se diferencia de mucho de la recta, es posible que la correlación no sea lineal</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb55-1" tabindex="-1"></a>g9 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(aire, <span class="fu">aes</span>(<span class="at">x =</span> Temp, <span class="at">y =</span> Ozone))</span>
+<span id="cb55-2"><a href="correlaciones-y-graficos-con-correlaciones.html#cb55-2" tabindex="-1"></a>g9 <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb55-3"><a href="correlaciones-y-graficos-con-correlaciones.html#cb55-3" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>) <span class="sc">+</span></span>
+<span id="cb55-4"><a href="correlaciones-y-graficos-con-correlaciones.html#cb55-4" tabindex="-1"></a>  <span class="fu">geom_smooth</span>()</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;
+## `geom_smooth()` using method = &#39;loess&#39; and formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-39-1.png" width="672" />
+Otro caso es la relación de viento con ozono, note que el smooth o línea suavisada, toma una curvatura que difiere mucho de la línea recta.</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb57-1" tabindex="-1"></a>g9 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(aire, <span class="fu">aes</span>(<span class="at">x =</span> Wind, <span class="at">y =</span> Ozone))</span>
+<span id="cb57-2"><a href="correlaciones-y-graficos-con-correlaciones.html#cb57-2" tabindex="-1"></a>g9 <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb57-3"><a href="correlaciones-y-graficos-con-correlaciones.html#cb57-3" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span>  <span class="st">&quot;lm&quot;</span>) <span class="sc">+</span></span>
+<span id="cb57-4"><a href="correlaciones-y-graficos-con-correlaciones.html#cb57-4" tabindex="-1"></a>  <span class="fu">geom_smooth</span>()</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;
+## `geom_smooth()` using method = &#39;loess&#39; and formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="AnalisisdeDatos_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="correlaciones-y-graficos-con-correlaciones.html#cb59-1" tabindex="-1"></a><span class="co"># Se puede tener acceso al intervalo de confianza del modelo que se creó previamente mod1</span></span>
+<span id="cb59-2"><a href="correlaciones-y-graficos-con-correlaciones.html#cb59-2" tabindex="-1"></a></span>
+<span id="cb59-3"><a href="correlaciones-y-graficos-con-correlaciones.html#cb59-3" tabindex="-1"></a><span class="fu">confint</span>(mod1)</span></code></pre></div>
+<pre><code>##                   2.5 %      97.5 %
+## (Intercept) -184.818372 -110.473773
+## Temp           1.964787    2.913433</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="practica-utilizando-astasa-anexos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
