@@ -424,7 +424,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">4.6</span> Supuesto de Independencia<a href="modelos-lineales.html#supuesto-de-independencia" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Este supuesto se refiere a que los residuales deben ser independientes, es decir no estar autocorrelacionados. Los residuales están autocorrelacionados cuando las observaciones provienen de un diseño de muestreo que no permitió obtener observaciones independientes, es decir que el valor de una observación no depende de la anterior. esto es común en series de timepo, cuando una variable se mide a lo largo del tiempo.</p>
 <div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="modelos-lineales.html#cb151-1" tabindex="-1"></a><span class="fu">check_autocorrelation</span>(regresion_simple)</span></code></pre></div>
-<pre><code>## OK: Residuals appear to be independent and not autocorrelated (p = 0.080).</code></pre>
+<pre><code>## OK: Residuals appear to be independent and not autocorrelated (p = 0.078).</code></pre>
 <p>Ahora pasemos a resolver el problema de la falta de homogeneidad de varianza</p>
 </div>
 <div id="tecnicas-para-corregir-la-heterocedasticidad-de-varianzas" class="section level2 hasAnchor" number="4.7">
