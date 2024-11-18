@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Introduccion | AnalisisdeDatos.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Introduccion | AnalisisdeDatos.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Introduccion | AnalisisdeDatos.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="correlaciones-y-graficos-con-correlaciones.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="chapter" data-level="" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i>Introduccion</a></li>
+<li class="chapter" data-level="1" data-path="correlaciones-y-graficos-con-correlaciones.html"><a href="correlaciones-y-graficos-con-correlaciones.html"><i class="fa fa-check"></i><b>1</b> Correlaciones y graficos con correlaciones</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="correlaciones-y-graficos-con-correlaciones.html"><a href="correlaciones-y-graficos-con-correlaciones.html#que-tipo-de-objeto-es-c"><i class="fa fa-check"></i><b>1.1</b> ¿Que tipo de objeto es c?</a></li>
+<li class="chapter" data-level="1.2" data-path="chapters/Introduction.html"><a href="#pasamos-a-la-secci%C3%B3n-de-modelaje."><i class="fa fa-check"></i><b>1.2</b> Pasamos a la sección de modelaje.</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="practica-utilizando-astasa-anexos.html"><a href="practica-utilizando-astasa-anexos.html"><i class="fa fa-check"></i><b>2</b> Practica utilizando astasa (Anexos)</a></li>
+<li class="chapter" data-level="3" data-path="exploracion-y-visualizacion-de-datos.html"><a href="exploracion-y-visualizacion-de-datos.html"><i class="fa fa-check"></i><b>3</b> Exploracion y Visualizacion de Datos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="chapters/Introduction.html"><a href="#exploraci%C3%B3n-de-datos"><i class="fa fa-check"></i><b>3.1</b> Exploración de datos</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="exploracion-y-visualizacion-de-datos.html"><a href="exploracion-y-visualizacion-de-datos.html#que-interesa-conocer-de-los-datos"><i class="fa fa-check"></i><b>3.1.1</b> ¿Que interesa conocer de los datos?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="exploracion-y-visualizacion-de-datos.html"><a href="exploracion-y-visualizacion-de-datos.html#una-mirada-a-los-datos"><i class="fa fa-check"></i><b>3.2</b> Una mirada a los datos</a></li>
+<li class="chapter" data-level="3.3" data-path="exploracion-y-visualizacion-de-datos.html"><a href="exploracion-y-visualizacion-de-datos.html#atipicidades"><i class="fa fa-check"></i><b>3.3</b> Atipicidades</a></li>
+<li class="chapter" data-level="3.4" data-path="exploracion-y-visualizacion-de-datos.html"><a href="exploracion-y-visualizacion-de-datos.html#una-mirada-a-las-correlaciones"><i class="fa fa-check"></i><b>3.4</b> Una mirada a las correlaciones</a></li>
+<li class="chapter" data-level="3.5" data-path="exploracion-y-visualizacion-de-datos.html"><a href="exploracion-y-visualizacion-de-datos.html#bases-para-la-regresion"><i class="fa fa-check"></i><b>3.5</b> Bases para la regresion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="modelos-lineales.html"><a href="modelos-lineales.html"><i class="fa fa-check"></i><b>4</b> Modelos Lineales</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="modelos-lineales.html"><a href="modelos-lineales.html#modelo-lineal-general"><i class="fa fa-check"></i><b>4.1</b> Modelo lineal general</a></li>
+<li class="chapter" data-level="4.2" data-path="modelos-lineales.html"><a href="modelos-lineales.html#que-es-un-modelo"><i class="fa fa-check"></i><b>4.2</b> ¿Que es un modelo?</a></li>
+<li class="chapter" data-level="4.3" data-path="modelos-lineales.html"><a href="modelos-lineales.html#regresion-lineal-simple"><i class="fa fa-check"></i><b>4.3</b> Regresion lineal simple</a></li>
+<li class="chapter" data-level="4.4" data-path="modelos-lineales.html"><a href="modelos-lineales.html#supuesto-de-normalidad"><i class="fa fa-check"></i><b>4.4</b> Supuesto de Normalidad</a></li>
+<li class="chapter" data-level="4.5" data-path="modelos-lineales.html"><a href="modelos-lineales.html#supuesto-de-homocedasticidad-de-varianzas"><i class="fa fa-check"></i><b>4.5</b> Supuesto de Homocedasticidad de varianzas</a></li>
+<li class="chapter" data-level="4.6" data-path="modelos-lineales.html"><a href="modelos-lineales.html#supuesto-de-independencia"><i class="fa fa-check"></i><b>4.6</b> Supuesto de Independencia</a></li>
+<li class="chapter" data-level="4.7" data-path="modelos-lineales.html"><a href="modelos-lineales.html#tecnicas-para-corregir-la-heterocedasticidad-de-varianzas"><i class="fa fa-check"></i><b>4.7</b> Tecnicas para corregir la heterocedasticidad de varianzas</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="herramientas-para-visualizar-datos.html"><a href="herramientas-para-visualizar-datos.html"><i class="fa fa-check"></i><b>5</b> Herramientas para visualizar datos</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="chapters/Introduction.html"><a href="#chunk-de-librer%C3%ADas"><i class="fa fa-check"></i><b>5.1</b> Chunk de librerías</a></li>
+<li class="chapter" data-level="5.2" data-path="herramientas-para-visualizar-datos.html"><a href="herramientas-para-visualizar-datos.html#carga-de-la-base-de-datos"><i class="fa fa-check"></i><b>5.2</b> Carga de la base de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="visualizacion-de-datos-con-ggplot2.html"><a href="visualizacion-de-datos-con-ggplot2.html"><i class="fa fa-check"></i><b>6</b> Visualizacion de Datos con ggplot2</a></li>
+<li class="chapter" data-level="7" data-path="graficos-de-barras.html"><a href="graficos-de-barras.html"><i class="fa fa-check"></i><b>7</b> Graficos de Barras</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="graficos-de-barras.html"><a href="graficos-de-barras.html#requerimientos"><i class="fa fa-check"></i><b>7.1</b> Requerimientos</a></li>
+<li class="chapter" data-level="7.2" data-path="graficos-de-barras.html"><a href="graficos-de-barras.html#legend-siempre-nos-pide-los-siguientes-argumentos"><i class="fa fa-check"></i><b>7.2</b> legend() siempre nos pide los siguientes argumentos</a></li>
+<li class="chapter" data-level="7.3" data-path="graficos-de-barras.html"><a href="graficos-de-barras.html#grafico-de-pastel"><i class="fa fa-check"></i><b>7.3</b> Grafico de pastel</a></li>
+<li class="chapter" data-level="7.4" data-path="graficos-de-barras.html"><a href="graficos-de-barras.html#grafico-de-dona"><i class="fa fa-check"></i><b>7.4</b> Grafico de dona</a></li>
+<li class="chapter" data-level="7.5" data-path="graficos-de-barras.html"><a href="graficos-de-barras.html#para-practicar"><i class="fa fa-check"></i><b>7.5</b> Para practicar</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="diagramas-de-cajas-boxplots.html"><a href="diagramas-de-cajas-boxplots.html"><i class="fa fa-check"></i><b>8</b> Diagramas de cajas (Boxplots)</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="chapters/Introduction.html"><a href="#chunk-para-librer%C3%ADas"><i class="fa fa-check"></i><b>8.1</b> Chunk para librerías</a></li>
+<li class="chapter" data-level="8.2" data-path="diagramas-de-cajas-boxplots.html"><a href="diagramas-de-cajas-boxplots.html#pie-chart"><i class="fa fa-check"></i><b>8.2</b> Pie Chart</a></li>
+<li class="chapter" data-level="8.3" data-path="diagramas-de-cajas-boxplots.html"><a href="diagramas-de-cajas-boxplots.html#paleta-de-colores"><i class="fa fa-check"></i><b>8.3</b> Paleta de colores</a></li>
+<li class="chapter" data-level="8.4" data-path="diagramas-de-cajas-boxplots.html"><a href="diagramas-de-cajas-boxplots.html#diagrama-de-cajas"><i class="fa fa-check"></i><b>8.4</b> Diagrama de cajas</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduccion" class="section level1 unnumbered hasAnchor">
+<h1>Introduccion<a href="introduccion.html#introduccion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este libro contempla un compendio de herramientas disponibles en el lenguaje R esenciales para el análisis de datos usando modelos de correlación y regresión lineal, modelos de exploración y visualización de datos, así como modelos de estadística descriptiva.
+El libro cuenta con un enfoque práctico, de manera que no se profundiza en conceptos teóricos de las herramientas estadísticas utilizadas, sino que se parte del hecho de que el lector ya cuenta con una noción de estas herramientas y que, por tanto, el libro le ofrece la posibilidad de implementarlas usando el lenguaje de R.
+Los modelos acá presentados, usan como base datos ambientales, sin embargo, el lector desea implementar los modelos usando otro tipo de variable, puede usar este libro y seguir los pasos indicados, pues estas herramientas son generales y por tanto adaptables a otros entornos.
+Para la elaboración de los ejemplos se utilizaron bases de datos de libre uso disponibles en la suite de R, por lo que el lector dispone de toda libertar para hacer las réplicas que requiera. Este material da un trato especial al paquete GGPlot 2 que es uno de los más robustos en el mercado y permite generar gráficos de alta calidad mediante la lógica de uso de capas que permite generar modelos gráficos que van desde los más simples a los más complejos que involucran varias variables y sus interrelaciones.</p>
+<p>Finalmente, quisiera agradecer al estudiante <a href="https://izackk.com">Isaac Ramírez Rojas</a> de la carrera de Ingeniería en del Tecnológico de Costa Rica, Computación del Campus Tecnológico Local San Carlos, por su colaboración con el mejoramiento de algunos objetos como tablas y ecuaciones usando LateX, así como su asesoría para que este libro fuese publicado en línea usando GitHub y la librería Bookdown de R.</p>
+<div style="font-size: 22px; font-weight: bold; margin-top: 20px;">
+<p>Sobre el autor</p>
+</div>
+<p>El M.Sc. Esteban Ballestero Alfaro tiene formación en Enseñanza de la Matemática y es académico, investigador y extensionista de la Escuela de Ciencias Naturales y Exactas del Instituto Tecnológico de Costa Rica, Campus Tecnológico Local San Carlos. Para contactar al autor puede escribir al correo <a href="mailto:eballestero@itcr.ac.cr" class="email">eballestero@itcr.ac.cr</a></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="correlaciones-y-graficos-con-correlaciones.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
